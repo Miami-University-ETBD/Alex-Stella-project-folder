@@ -1,0 +1,86 @@
+/* Global Variables */
+:root {
+    --background-color: #d1d9e0; /* Light gray background */
+    --dark-bg: #181818;          /* Dark background for header and footer */
+    --light-text: #d1d9e0;       /* Light text color */
+    --muted-text: #76828d;       /* Muted color for subheaders and borders */
+    --blockquote-bg: #d8d1c8;    /* Light background for blockquotes */
+    --blockquote-border: #8b7f72;/* Border color for blockquotes */
+    --table-header-bg: #8b7f72;  /* Muted background for table headers */
+}
+
+/* Body Styles */
+body {
+    background-color: var(--background-color);
+    font-family: 'Arial, sans-serif';   
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--muted-text);
+}
+
+/* Blockquote Styles */
+blockquote {
+    border-left: 4px solid var(--blockquote-border);
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: var(--blockquote-bg);
+    font-style: italic;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid var(--muted-text);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--table-header-bg);
+    color: var(--light-text);
+}
+
+/* List Styles */
+ul, ol {
+    padding-left: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Padding for Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+}
