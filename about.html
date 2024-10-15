@@ -1,95 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<nav>
+    <div class="logo">Stang Detailing</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Stang Detailing</title>
-    <style>
-        /* Body Styles */
-        body {
-            background-color: #f2f2f2; /* Light gray background */
-            color: #333; /* Dark text color */
-            font-family: Arial, sans-serif; /* Font family */
-            line-height: 1.6; /* Line height for readability */
-            margin: 0; /* Removes default margin */
-            padding: 20px; /* Adds padding */
-        }
+<style>
+    /* Navigation Styles */
+    nav {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: space-between; /* Space between logo and links */
+        align-items: center; /* Center items vertically */
+        background-color: #333; /* Dark background color */
+        padding: 10px 20px; /* Padding for the nav */
+    }
 
-        /* Header Styles */
-        header {
-            background-color: #333; /* Dark background for header */
-            color: #fff; /* Light text color */
-            padding: 20px; /* Padding */
-            text-align: center; /* Centered text */
-        }
+    .logo {
+        color: #fff; /* White color for the logo */
+        font-size: 1.5em; /* Larger font size for the logo */
+    }
 
-        h1 {
-            font-size: 2.5em; /* Larger font size */
-            margin-bottom: 10px; /* Space below */
-        }
+    .nav-links {
+        list-style: none; /* Remove default list styling */
+        display: flex; /* Align links horizontally */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
 
-        /* Sub-header Styles */
-        h2 {
-            font-size: 2em; /* Size for sub-headers */
-            margin-top: 20px; /* Space above */
-            color: #00796b; /* A distinct color for sub-headers */
-        }
+    .nav-links li {
+        margin-left: 20px; /* Space between links */
+    }
 
-        /* Paragraph Styles */
-        p {
-            font-size: 1.2em; /* Text size for paragraphs */
-            margin-bottom: 20px; /* Space below */
-        }
+    .nav-links a {
+        text-decoration: none; /* Remove underline */
+        color: #fff; /* White color for links */
+        font-size: 1.2em; /* Font size for links */
+        transition: color 0.3s; /* Smooth color transition on hover */
+    }
 
-        /* List Styles */
-        ul {
-            padding-left: 20px; /* Padding for lists */
-        }
+    .nav-links a:hover {
+        color: #00796b; /* Change color on hover */
+    }
+</style>
 
-        /* Table Styles */
-        table {
-            width: 100%; /* Full width */
-            border-collapse: collapse; /* Collapses borders */
-            margin: 20px 0; /* Margin above and below */
-        }
-
-        th, td {
-            border: 1px solid #00796b; /* Muted border color */
-            padding: 10px; /* Padding inside cells */
-            text-align: left; /* Aligns text to the left */
-        }
-
-        th {
-            background-color: #00796b; /* Muted background for header cells */
-            color: #fff; /* Light text for header */
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #333; /* Dark background for footer */
-            color: #fff; /* Light text */
-            text-align: center; /* Centered text */
-            padding: 10px; /* Padding */
-            position: relative; /* Positioning */
-            bottom: 0; /* Sticks to the bottom */
-            width: 100%; /* Full width */
-        }
-
-        /* Blockquote Styles */
-        blockquote {
-            border-left: 4px solid #00796b; /* Highlighted left border for quotes */
-            padding: 10px 20px;
-            margin: 20px 0;
-            background-color: #e0f2f1; /* Light background for quotes */
-            font-style: italic; /* Italic text */
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Header Section -->
+<!-- Header Section -->
     <header>
         <h1>About Stang Detailing</h1>
         <p>Your trusted partner for exceptional car care!</p>
@@ -116,6 +73,8 @@
     <!-- Meet Our Team Section -->
     <section>
         <h2>Meet Our Team</h2>
+      <img src="C:\Users\alexs\Desktop\images (3).jpg" alt="St.X Logo">
+
         <p>Our dedicated team of professionals at Stang Detailing is committed to providing the best car detailing services. Each member brings a unique skill set, passion for cars, and a focus on customer service. Together, we work diligently to ensure that your vehicle receives the best care possible.</p>
         <p>We continually train and update our skills to stay ahead in the detailing industry. Our team is not only experienced but also loves what they do, making each detailing session enjoyable for both us and our clients.</p>
     </section>
@@ -126,49 +85,113 @@
         <p>Regular detailing can significantly increase the resale value of your vehicle. Keeping your car clean inside and out, along with protective treatments, can make a big difference!</p>
     </aside>
 
-    <!-- Services Table Section -->
-    <section>
-        <h2>Our Services</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Service</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Exterior Wash</td>
-                    <td>Thorough wash of the exterior surfaces, including wheels and tires.</td>
-                    <td>$25</td>
-                </tr>
-                <tr>
-                    <td>Interior Detailing</td>
-                    <td>Deep cleaning of seats, carpets, and upholstery.</td>
-                    <td>$75</td>
-                </tr>
-                <tr>
-                    <td>Full Detail</td>
-                    <td>Comprehensive service covering both interior and exterior detailing.</td>
-                    <td>$150</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
     <!-- Footer Section -->
     <footer>
         <h2>Contact Us</h2>
         <p>If you have any questions or would like to learn more about our services, feel free to reach out!</p>
-        <p>Email: <a href="mailto:info@stangdetailing.com" style="color: #fff;">info@stangdetailing.com</a> | Phone: (123) 456-7890</p>
+        <p>Email: <a href="mailto:info@stangdetailing.com">info@stangdetailing.com</a> | Phone: (123) 456-7890</p>
         <p>&copy; 2024 Stang Detailing. All rights reserved.</p>
         <p>Follow us on social media: 
-            <a href="#" style="color: #fff;">Facebook</a> | 
-            <a href="#" style="color: #fff;">Instagram</a>
+           <a href="https://www.facebook.com/StangDetailing/" target="_blank" style="display: inline-block; background-color: #3b5998; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
+    Visit Us on Facebook
+</a>
+
         </p>
     </footer>
 
 </body>
 
+</html>
+ <title>Request a Quote - Stang Detailing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #006400;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Request a Quote</h1>
+
+    <form id="quoteForm">
+        <label for="carType">Select your car type:</label>
+        <select id="carType">
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="truck">Truck</option>
+            <option value="sports">Sports Car</option>
+        </select>
+
+        <label for="serviceType">Select service type:</label>
+        <select id="serviceType">
+            <option value="basic">Basic Detailing ($50)</option>
+            <option value="premium">Premium Detailing ($100)</option>
+            <option value="ceramic">Ceramic Coating ($200)</option>
+        </select>
+
+        <button type="button" onclick="calculateQuote()">Get Quote</button>
+
+        <div class="result" id="quoteResult"></div>
+    </form>
+
+    <script>
+        function calculateQuote() {
+            const carType = document.getElementById("carType").value;
+            const serviceType = document.getElementById("serviceType").value;
+
+            let basePrice;
+            if (serviceType === "basic") {
+                basePrice = 50;
+            } else if (serviceType === "premium") {
+                basePrice = 100;
+            } else if (serviceType === "ceramic") {
+                basePrice = 200;
+            }
+
+            let extraCharge = 0;
+            if (carType === "suv" || carType === "truck") {
+                extraCharge = 20;  // Extra charge for larger vehicles
+            } else if (carType === "sports") {
+                extraCharge = 30;  // Extra charge for high-end sports cars
+            }
+
+            const totalPrice = basePrice + extraCharge;
+
+            document.getElementById("quoteResult").innerHTML = 
+                "Estimated Quote: $" + totalPrice;
+        }
+    </script>
+
+</body>
 </html>
