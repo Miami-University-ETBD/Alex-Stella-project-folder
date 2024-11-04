@@ -85,3 +85,235 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Image Carousel</title>
+    <style>
+        /* Carousel container */
+        .carousel {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            max-width: 700px;
+        }
+
+        /* Track for slides */
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Individual slides */
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Carousel buttons */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 1em;
+            font-size: 1.5em;
+            z-index: 1;
+        }
+
+        .left-button {
+            left: 10px;
+        }
+
+        .right-button {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel">
+    <div class="carousel-track">
+        <div class="carousel-slide">
+            <img src="https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019_1280.jpg" alt="Car 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxE0mS45gJQwpB4_jAsFYEbfIpO8pdbFNLww&s" alt="Car 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://cdn.motor1.com/images/mgl/mrz1e/s1/coolest-cars-feature.jpg" alt="Car 3">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://www.kbb.com/wp-content/uploads/2023/01/2024-chevrolet-corvette-e-ray-front-quarter-right.jpg?w=918" alt="Car 4">
+        </div>
+    </div>
+    <button class="carousel-button left-button">❮</button>
+    <button class="carousel-button right-button">❯</button>
+</div>
+
+<script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.right-button');
+    const prevButton = document.querySelector('.left-button');
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const offset = -currentIndex * 100;
+        track.style.transform = `translateX(${offset}%)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown FAQ</title>
+    <style>
+        /* FAQ container */
+        .faq-container {
+            width: 80%;
+            margin: auto;
+            max-width: 700px;
+            font-family: Arial, sans-serif;
+            color: white; /* Set default text color to white */
+        }
+
+        /* Styling for each FAQ item */
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        /* Button for the dropdown question */
+        .faq-question {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: left;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            color: white; /* Set question text color to white */
+        }
+
+        .faq-question:hover {
+            color: #ccc; /* Lighter hover color for contrast */
+        }
+
+        /* Arrow icon styling */
+        .faq-question::after {
+            content: '▼';
+            font-size: 0.9em;
+            color: white; /* Arrow color */
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(180deg);
+        }
+
+        /* Answer content styling */
+        .faq-answer {
+            display: none;
+            padding: 10px 0;
+            font-size: 0.95em;
+            color: white; /* Answer text color to white */
+        }
+    </style>
+</head>
+<body style="background-color: #333;"> <!-- Dark background for contrast -->
+
+<div class="faq-container">
+    <h2 style="color: white;">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <button class="faq-question">What services do you offer?</button>
+        <div class="faq-answer">
+            <p>We offer a range of car detailing services, including exterior washing, waxing, polishing, interior cleaning, carpet shampooing, and leather conditioning.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">How much does a full detail cost?</button>
+        <div class="faq-answer">
+            <p>The cost depends on the size and condition of the vehicle, typically ranging from $100 to $250. Contact us for a detailed quote.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">How long does a detailing service take?</button>
+        <div class="faq-answer">
+            <p>On average, a full detail can take between 2 to 5 hours depending on the service package and vehicle size.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Do you offer mobile detailing services?</button>
+        <div class="faq-answer">
+            <p>Yes, we offer mobile detailing services and can come to your location with all necessary equipment.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">What payment methods do you accept?</button>
+        <div class="faq-answer">
+            <p>We accept cash, credit cards, and digital payments such as PayPal or Venmo.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Select all FAQ question buttons
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    // Add click event to each question
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            // Toggle the active class for rotation effect on arrow
+            question.classList.toggle('active');
+
+            // Get the answer element associated with this question
+            const answer = question.nextElementSibling;
+
+            // Toggle the display of the answer
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
