@@ -1,5 +1,5 @@
 /* Global Variables */
-:root {
+root {
     --background-color: #d1d9e0; /* Light gray background */
     --dark-bg: #181818;          /* Dark background for header and footer */
     --light-text: #d1d9e0;       /* Light text color */
@@ -169,4 +169,36 @@ button {
 
 button:hover {
     background-color: #0099cc;
+}
+nav{display:flex;
+    margin:0px;
+    padding: 0px;
+    width:100%;
+    margin: 0px auto 0px auto; 
+    
+}
+
+nav{list-style-type: none;
+    margin:0px;
+    padding:5px;
+    width:20%;
+    border-left: solid black;
+    border-right: solid black;
+    text-align:center;
+    font-size:20px;
+    background-color:gray;
+    transition: all .25s;
+    font-family: monospace;
+}
+
+nav li a{
+    color:whitesmoke;
+    background:none;
+}
+
+
+nav li:hover{
+    background-color:lightgray;
+    color:azure;
+    font-size:22px;
 }

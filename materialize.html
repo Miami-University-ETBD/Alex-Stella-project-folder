@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stang Detailing - Home</title>
@@ -12,22 +14,11 @@
         <div class="logo">Stang Detailing</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Services</a></li>
+            <li><a href="materialize.html">Services</a></li>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stang Detailing - Car Detailing Services</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
     <!-- Header Section -->
     <header>
         <h1>Stang Detailing</h1>
@@ -38,32 +29,29 @@
     <section id="about">
         <h2>About Us</h2>
         <p>At Stang Detailing, we take pride in delivering top-quality car detailing services. With years of experience and a commitment to excellence, our team ensures every car looks its absolute best.</p>
-        <img src="https://static.wixstatic.com/media/b7575b_76382df978fc445a89c8f1e53b604daa~mv2.jpg" alt="Car detailing in progress" class="about-image">
+        <img src="Images/jpegv4.jpg" alt="Car detailing in progress" class="about-image">
     </section>
 
     <!-- Customer Favorites Section -->
     <section id="customer-favorites">
         <h2>Customer Favorites</h2>
         <div class="favorite-cars">
-            <div class="car">
-                <img src="https://www.usnews.com/object/image/0000018b-fa28-dc80-a9ef-ffe9f8290001/01-2024-chevrolet-corvette-angular-front-jmv.JPG?update-time=1700709318771&size=responsiveGallery" alt="Clean sports car">
+            <div"car">
+                <img class="circle responsive-img" src="images/car.jpg">
                 <p>Sports Car Shine</p>
             </div>
             <div class="car">
-                <img src="https://res.cloudinary.com/jerrick/image/upload/c_scale,f_jpg,q_auto/6419c87408ea69001e41be25.jpg" alt="Luxury SUV">
+                <img src="Images/car1.jpg" alt="Luxury SUV">
                 <p>Luxury SUV Detail</p>
             </div>
             <div class="car">
-                <img src="https://money.com/wp-content/uploads/2024/01/Best-Autos-2024-Toyota-GR86.jpg?quality=60" alt="Classic car">
+                <img src="Images/car2.jpg" alt="Classic car">
                 <p>Detail Perfection</p>
             </div>
         </div>
     </section>
     <div class="video-container">
-        <video controls>
-          <source src="C:\Users\alexs\Desktop\Comp 1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/_OKuSFFVhjQ?si=wes5UVKLE38QH4wY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       
     <!-- Contact Us Section -->
@@ -82,15 +70,6 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Image Carousel</title>
     <style>
         /* Carousel container */
         .carousel {
@@ -140,60 +119,21 @@
             right: 10px;
         }
     </style>
-</head>
-<body>
-
 <div class="carousel">
-    <div class="carousel-track">
-        <div class="carousel-slide">
-            <img src="https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019_1280.jpg" alt="Car 1">
-        </div>
-        <div class="carousel-slide">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxE0mS45gJQwpB4_jAsFYEbfIpO8pdbFNLww&s" alt="Car 2">
-        </div>
-        <div class="carousel-slide">
-            <img src="https://cdn.motor1.com/images/mgl/mrz1e/s1/coolest-cars-feature.jpg" alt="Car 3">
-        </div>
-        <div class="carousel-slide">
-            <img src="https://www.kbb.com/wp-content/uploads/2023/01/2024-chevrolet-corvette-e-ray-front-quarter-right.jpg?w=918" alt="Car 4">
-        </div>
-    </div>
-    <button class="carousel-button left-button">❮</button>
-    <button class="carousel-button right-button">❯</button>
+    <a class="carousel-item" href="#one!"><img src="Images/car7.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="Images/car6.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="Images/car5.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="Images/car4.jpg"></a>
+    <a class="carousel-item" href="#five!"><img src="Images/car3.jpg"></a>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems);
+        });
+    </script>
 
-<script>
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.right-button');
-    const prevButton = document.querySelector('.left-button');
-
-    let currentIndex = 0;
-
-    function updateCarousel() {
-        const offset = -currentIndex * 100;
-        track.style.transform = `translateX(${offset}%)`;
-    }
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-    });
-
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarousel();
-    });
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown FAQ</title>
     <style>
         /* FAQ container */
         .faq-container {
@@ -250,9 +190,6 @@
             color: white; /* Answer text color to white */
         }
     </style>
-</head>
-<body style="background-color: #333;"> <!-- Dark background for contrast -->
-
 <div class="faq-container">
     <h2 style="color: white;">Frequently Asked Questions</h2>
 
@@ -314,6 +251,6 @@
         });
     });
 </script>
-
+<footer>Follow Us on Facebook https://www.facebook.com/StangDetailing/</footer>
 </body>
 </html>
