@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stang Detailing - Special Offers</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    .highlight {
+      background-color: #FFD700; /* Gold color for highlighting */
+      color: #000; /* Black text for contrast */
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Welcome to Stang Detailing</h2>
+<p>Explore our exclusive detailing packages to make your car shine!</p>
+<p id="special-offer">Special Offer: 20% off on full detailing packages!</p>
+<button>Highlight Special Offer</button>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#special-offer").toggleClass("highlight");
+  });
+});
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stang Detailing - Special Offer Animation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    #special-offer {
+      background-color: #FFD700; /* Gold for premium feel */
+      color: #000;
+      padding: 10px;
+      position: relative;
+      width: 250px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+<div id="special-offer">Special Offer: 20% off on full detailing!</div>
+<button>Animate Special Offer</button>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#special-offer").animate({
+      left: '250px',  /* Moves the element 250px to the right */
+      opacity: '0.5', /* Reduces opacity to 50% */
+      height: '+=20px', /* Increases height by 20px */
+      width: '+=20px' /* Increases width by 20px */
+    }, 1000); /* 1000ms = 1 second duration */
+  });
+});
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stang Detailing - Customer Feedback</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    /* Black and White Theme */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h2 {
+      font-size: 2em;
+      margin-top: 20px;
+    }
+    
+    #feedback-display {
+      background-color: #fff;
+      color: #000;
+      padding: 15px;
+      margin: 20px auto;
+      width: 300px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    
+    input[type="text"], button {
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    
+    button {
+      background-color: #fff;
+      color: #000;
+      border: 2px solid #fff;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #444;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Stang Detailing - Customer Feedback</h2>
+<p>Enter your feedback about our service:</p>
+<input type="text" id="feedback-input" placeholder="Your feedback here...">
+<button id="submit-feedback">Submit Feedback</button>
+
+<div id="feedback-display">Customer feedback will appear here.</div>
+
+<script>
+$(document).ready(function(){
+  $("#submit-feedback").click(function(){
+    // Get the value from the input field
+    var feedback = $("#feedback-input").val();
+    
+    // Set the content of the feedback display div
+    $("#feedback-display").html("Thank you for your feedback: " + feedback);
+    
+    // Clear the input field
+    $("#feedback-input").val("");
+  });
+});
+</script>
+
+</body>
+</html>
