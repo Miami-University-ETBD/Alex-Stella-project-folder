@@ -6,11 +6,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
     .highlight {
+
       background-color: #FFD700; /* Gold color for highlighting */
       color: #000; /* Black text for contrast */
       padding: 10px;
       border-radius: 5px;
       font-weight: bold;
+
+     
+
     }
   </style>
 </head>
@@ -19,11 +23,15 @@
 <h2>Welcome to Stang Detailing</h2>
 <p>Explore our exclusive detailing packages to make your car shine!</p>
 <p id="special-offer">Special Offer: 20% off on full detailing packages!</p>
-<button>Highlight Special Offer</button>
+
+
+
+<button id="highlightButton">Highlight Special Offer</button>
 
 <script>
 $(document).ready(function(){
-  $("button").click(function(){
+  $("#highlightButton").click(function(){
+
     $("#special-offer").toggleClass("highlight");
   });
 });
@@ -39,7 +47,9 @@ $(document).ready(function(){
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
     #special-offer {
+
       background-color: #FFD700; /* Gold for premium feel */
+
       color: #000;
       padding: 10px;
       position: relative;
@@ -49,12 +59,13 @@ $(document).ready(function(){
       font-weight: bold;
     }
   </style>
-<div id="special-offer">Special Offer: 20% off on full detailing!</div>
-<button>Animate Special Offer</button>
+
+<button id="animateButton">Animate Special Offer</button>
 
 <script>
 $(document).ready(function(){
-  $("button").click(function(){
+  $("#animateButton").click(function(){
+
     $("#special-offer").animate({
       left: '250px',  /* Moves the element 250px to the right */
       opacity: '0.5', /* Reduces opacity to 50% */
